@@ -1,0 +1,30 @@
+/*******************************************************************************
+*  Saima Teasha
+*  CS125
+*  program HW1
+*
+*  a program in C that creates (spawns or forks (Links to an external site.)) 
+*  three children. Each time through the spawning loop, in addition to 
+*  spawning/forking a child, the parent process prints out a line that:
+*      - Identifies the process that is printing the line as the parent process
+*      - Provides the process identifier of the printing process (the parent)
+*      - States which of the three children it just forked
+*      - Provides the process identifier of the new child process that it just 
+*        created
+*  Have each child process just print one line that:
+*      - Identifies the process that is printing the line as a child process
+*      - Indicates which child it is (there are going to be three of them, right?)
+*      - Provides its (the child process's) process identifier
+*      - Provides its parent's process identifier.
+*******************************************************************************/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+int main()
+{
+    printf("\n  Process %d, now running program 'child2Replacement.exe' My parent's PID is %d \n", getpid(), getppid());
+    return 0;
+}
